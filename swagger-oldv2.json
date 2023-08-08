@@ -22,35 +22,6 @@
     "produces": ["application/json"],
 
     "paths": {
-        "/initialize": {
-            "post": {
-                "summary": "Initalise the chain.",
-                "produces": [
-                    "application/json"
-                ],
-                "consumes": [
-                    "application/json"
-                ],
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "initInfo",
-                        "description": "User and conversation info to initialise the chain.",
-                        "schema": {
-                            "$ref": "#/definitions/InitialiseInput"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successful response",
-                        "schema": {
-                            "$ref":"#/definitions/ConversationOutput"
-                        }
-                    }
-                }    
-            }
-        },
         "/conversation": {
             "post": {
                 "summary": "A message is posted and a response is received",
@@ -81,20 +52,7 @@
             }
         }
     },
-
     "definitions": {
-        "InitialiseInput": {
-            "required": ["userID", "conversationID"],
-            "type": "object",
-            "properties": {
-                "userID": {
-                "type": "integer"
-                },
-                "conversationID": {
-                "type": "integer"
-                }
-            }
-        },
         "ConversationInput": {
             "required": ["prompt", "userID", "conversationID", "firstMsg"],
             "type": "object",
@@ -107,7 +65,11 @@
                 },
                 "conversationID": {
                 "type": "integer"
+                },
+                "firstMsg": {
+                "type": "boolean"
                 }
+
             }
         },
         "ConversationOutput": {

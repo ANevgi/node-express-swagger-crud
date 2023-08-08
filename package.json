@@ -11,10 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pinecone-database/pinecone": "^0.1.5",
     "body-parser": "^1.19.0",
+    "d3-dsv": "^2.0.0",
+    "dotenv": "^16.3.1",
     "express": "^4.17.1",
+    "langchain": "^0.0.122",
     "nodemon": "^2.0.4",
-    "swagger-ui-express": "^4.1.4"
+    "swagger-ui-express": "^4.1.4",
+    "hnswlib-node": "^1.4.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
