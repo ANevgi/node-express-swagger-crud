@@ -54,6 +54,6 @@ app.post("/conversation", (req, res) => {
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.listen(8000, () => {
-  console.log("server listening on port 8000!");
+app.listen(22, () => {
+  console.log("server listening on port 22!");
 });
